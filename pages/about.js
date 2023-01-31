@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Avatar, Chip } from '@material-ui/core'
+import Avatar from '@material-ui/core/Avatar'
+import Chip from '@material-ui/core/Chip'
 
 const about = () => {
     return (

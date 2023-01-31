@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles"
 import PropTypes from 'prop-types'
-
-import { Grid, Chip } from '@material-ui/core'
+import Grid from '@material-ui/core/Grid'
+import Chip from '@material-ui/core/Chip'
 
 const useStyles = makeStyles({
     label: {

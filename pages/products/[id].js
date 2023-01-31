@@ -1,5 +1,5 @@
 import Layout from "@common/components/Layout"
-import { Container } from "@material-ui/core"
+import Container from "@material-ui/core/Container"
 import ProductDetailCard from "@mobile/components/ProductDetailCard"
 
 const ProductDetail = ({ product }) => {
@@ -39,7 +39,7 @@ const ProductDetail = ({ product }) => {
 }
 
 export async function getStaticPaths() {
-    const res = await fetch("http://localhost:3000/api/products")
+    const res = await fetch("http://localhost:3009/api/products")
     const products = await res.json()
 
     const paths = products.list.map(prod => `/products/${prod.id}`)
@@ -47,7 +47,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(`http://localhost:3000/api/product/${params.id}`)
+    const res = await fetch(`http://localhost:3009/api/product/${params.id}`)
     const product = await res.json()
 
     return {

@@ -1,7 +1,11 @@
 import Link from 'next/link'
 import { makeStyles } from '@material-ui/core/styles'
-import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core'
-import { Menu } from '@material-ui/icons'
+import Menu from '@material-ui/icons/Menu'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+import IconButton from '@material-ui/core/IconButton'
+
 
 const useStyles = makeStyles((theme) => ({
     root: {

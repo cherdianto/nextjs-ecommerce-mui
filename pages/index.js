@@ -1,5 +1,6 @@
 import Layout from '@common/components/Layout'
-import { Container, Grid } from '@material-ui/core';
+import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
 
 import ProductCard from '@common/components/ProductCard';
 
@@ -33,7 +34,7 @@ export default function HomePage({ products }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch("http://localhost:3009/api/products");
   const products = await res.json();
 
   return {
