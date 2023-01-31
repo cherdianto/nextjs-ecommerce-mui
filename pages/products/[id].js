@@ -39,7 +39,7 @@ const ProductDetail = ({ product }) => {
 }
 
 const baseUrl = process.env.ENV === 'prod' ? process.env.BASE_URL_PROD : process.env.BASE_URL_DEV
-export async function getStaticPaths() {
+export async function getServerSidePaths() {
     const res = await fetch(`${baseUrl}/api/products`)
     const products = await res.json()
 
@@ -47,7 +47,7 @@ export async function getStaticPaths() {
     return { paths, fallback: false }
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
     const res = await fetch(`${baseUrl}/api/product/${params.id}`)
     const product = await res.json()
 

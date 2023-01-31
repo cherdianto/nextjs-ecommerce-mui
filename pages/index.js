@@ -34,7 +34,7 @@ export default function HomePage({ products }) {
 }
 const baseUrl = process.env.ENV === 'prod' ? process.env.BASE_URL_PROD : process.env.BASE_URL_DEV
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`${baseUrl}/api/products`);
   const products = await res.json();
 
