@@ -32,9 +32,10 @@ export default function HomePage({ products }) {
     </Layout>
   )
 }
+const baseUrl = process.env.ENV === 'prod' ? process.env.BASE_URL_PROD : process.env.BASE_URL_DEV
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3009/api/products");
+  const res = await fetch(`${baseUrl}/api/products`);
   const products = await res.json();
 
   return {
